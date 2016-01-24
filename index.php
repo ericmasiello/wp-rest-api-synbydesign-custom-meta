@@ -15,12 +15,13 @@ function qod_add_custom_meta_to_posts( $data, $post, $context ) {
   return $data;
 }
 
+$stack_design = get_post_meta( $post['ID'], 'stack_design', true );
+$website_url = get_post_meta( $post['ID'], 'website_url', true );
 $mix_url = get_post_meta( $post['ID'], 'mix_url', true );
 $track_list = get_post_meta( $post['ID'], 'track_list', true );
 
-if ( ! empty( $mix_url ) ) {
-  $data['custom_meta'] = array( 'mix_url' => $mix_url, 'track_list' => $track_list );
-}
+$data['custom_meta'] = array( 'mix_url' => $mix_url, 'track_list' => $track_list, 'website_url' => $website_url, 'stack_design' => $stack_design );
+
 
 return $data;
 }

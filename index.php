@@ -19,8 +19,9 @@ $stack_design = get_post_meta( $post['ID'], 'stack_design', true );
 $website_url = get_post_meta( $post['ID'], 'website_url', true );
 $mix_url = get_post_meta( $post['ID'], 'mix_url', true );
 $track_list = get_post_meta( $post['ID'], 'track_list', true );
+$svg = get_post_meta( $post['ID'], 'svg', true );
 
-$data['custom_meta'] = array( 'mix_url' => $mix_url, 'track_list' => $track_list, 'website_url' => $website_url, 'stack_design' => $stack_design );
+$data['custom_meta'] = array( 'mix_url' => $mix_url, 'track_list' => $track_list, 'website_url' => $website_url, 'stack_design' => $stack_design, 'svg' => $svg );
 
 
 return $data;
